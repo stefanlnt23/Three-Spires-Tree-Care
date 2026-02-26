@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Spires Tree Care | Coventry's 5-Star Tree Surgeons</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Preview Modal (Popup) -->
+    <div id="previewModal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🌟 You're Viewing a Live Demo</h2>
+            </div>
+            <div class="modal-body">
+                <p><strong>Welcome to the Three Spires Tree Care demo website!</strong></p>
+                <p>This is a fully-functional demonstration built by <strong>web-force.info</strong>. What you're seeing:</p>
+                <ul class="modal-list">
+                    <li>✓ All design elements are customizable</li>
+                    <li>✓ Photos are placeholders - we'll use YOUR project images</li>
+                    <li>✓ Buttons currently show demo messages - will be fully functional when live</li>
+                    <li>✓ Forms will connect to your email/CRM system</li>
+                    <li>✓ Contact info will be updated to your real details</li>
+                </ul>
+                <p class="modal-highlight"><strong>Ready to make this YOUR website?</strong></p>
+                <p>Contact us at <a href="https://web-force.info" target="_blank">web-force.info</a> to discuss your custom build.</p>
+            </div>
+            <div class="modal-footer">
+                <button onclick="closePreviewModal()" class="btn-modal-primary">Continue Viewing Demo →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button Click Modal -->
+    <div id="actionModal" class="modal">
+        <div class="modal-overlay" onclick="closeActionModal()"></div>
+        <div class="modal-content modal-small">
+            <div class="modal-header">
+                <h3>📋 Demo Preview Notice</h3>
+            </div>
+            <div class="modal-body">
+                <p><strong>This is a demonstration website.</strong></p>
+                <p>In the live version, this button would:</p>
+                <p id="actionDescription" class="action-description"></p>
+                <div class="modal-notice">
+                    <p><strong>All images are placeholders</strong> and will be replaced with your actual project photos when the site goes live.</p>
+                </div>
+                <p class="modal-cta-text">Want to make this real? Contact <a href="https://web-force.info" target="_blank"><strong>web-force.info</strong></a></p>
+            </div>
+            <div class="modal-footer">
+                <button onclick="closeActionModal()" class="btn-modal-secondary">Got it, thanks!</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1>Three Spires Tree Care</h1>
+                    <span class="tagline">Coventry's 5-Star Tree Surgeons</span>
+                </div>
+                <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="mobile-cta"><a href="#quote" class="btn-primary">Get a Free Quote</a></li>
+                </ul>
+                <a href="#quote" class="btn-primary desktop-cta">Get a Free Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="five-star-badge">
+                    <span class="stars">★★★★★</span>
+                    <span class="rating-text">5.0 Rating</span>
+                </div>
+                <h2 class="hero-headline">Professional Tree Surgeons Serving Coventry & the Midlands</h2>
+                <p class="hero-subheadline">Expert tree removal, pruning, hedge maintenance and site clearance — carried out safely, professionally and always left tidy.</p>
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <span class="check-icon">✓</span>
+                        <span>Fully Qualified Arborists</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="check-icon">✓</span>
+                        <span>Fully Insured & Local</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="check-icon">✓</span>
+                        <span>Free, No-Obligation Quotes</span>
+                    </div>
+                </div>
+                <a href="#quote" class="btn-hero">Get a Free Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Banner -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="social-proof-content">
+                <span class="stars-large">★★★★★</span>
+                <h3>Rated 5/5 on Google by the Coventry Community</h3>
+                <p>Trusted by homeowners across Coventry, Warwickshire & the Midlands for safe, professional tree care</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Professional arboricultural services tailored to your needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1617143520628-86934f404d06?w=800&q=80" alt="Professional tree removal in Coventry">
+                        <div class="photo-badge">You choose the photo - this is just an example</div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Tree Removal</h3>
+                        <p class="service-subtitle">Safe & Complete Felling</p>
+                        <p>From dangerous or unwanted trees to large-scale clearance, we remove trees of all sizes safely and efficiently, leaving your space clean and tidy.</p>
+                        <ul class="service-list">
+                            <li>Full tree felling & dismantling</li>
+                            <li>Sectional felling in tight spaces</li>
+                            <li>Stump grinding & removal</li>
+                            <li>All waste removed from site</li>
+                        </ul>
+                        <a href="#quote" class="btn-service">Get a Quote</a>
+                    </div>
+                </div>
+
+                <div class="service-card featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1588878309774-4b3f42a19a8f?w=800&q=80" alt="Professional tree pruning and crown reduction">
+                        <div class="photo-badge">You choose the photo - this is just an example</div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Tree Pruning</h3>
+                        <p class="service-subtitle">Crown Reduction & Shaping</p>
+                        <p>Expert pruning to maintain the health, shape and safety of your trees. We work to the latest arboricultural standards to ensure the best results.</p>
+                        <ul class="service-list">
+                            <li>Crown reduction & thinning</li>
+                            <li>Crown lifting & reshaping</li>
+                            <li>Deadwood removal</li>
+                            <li>Pollarding & formative pruning</li>
+                        </ul>
+                        <a href="#quote" class="btn-service">Get a Quote</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=800&q=80" alt="Professional hedge trimming and maintenance">
+                        <div class="photo-badge">You choose the photo - this is just an example</div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Hedge Maintenance</h3>
+                        <p class="service-subtitle">Trimming, Shaping & Reduction</p>
+                        <p>Keep your hedges looking their best all year round with our professional hedge trimming and maintenance services. Neat, tidy and shaped to perfection.</p>
+                        <ul class="service-list">
+                            <li>Hedge trimming & shaping</li>
+                            <li>Hedge reduction & renovation</li>
+                            <li>Conifer hedge management</li>
+                            <li>Regular maintenance contracts</li>
+                        </ul>
+                        <a href="#quote" class="btn-service">Get a Quote</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="Site clearance services">
+                        <div class="photo-badge">You choose the photo - this is just an example</div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Site Clearance</h3>
+                        <p class="service-subtitle">Complete Land & Garden Clearance</p>
+                        <p>Whether it's overgrown gardens, development sites or neglected land, we provide thorough site clearance services to transform your space.</p>
+                        <ul class="service-list">
+                            <li>Garden clearance & tidy-ups</li>
+                            <li>Overgrown land clearance</li>
+                            <li>Shrub & bramble removal</li>
+                            <li>Green waste disposal</li>
+                        </ul>
+                        <a href="#quote" class="btn-service">Get a Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Recent Projects</h2>
+                <p>See the quality of our work across Coventry & the Midlands</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1617143520628-86934f404d06?w=800&q=80" alt="Large tree removal project Coventry">
+                    <div class="photo-badge">Example photo - you choose yours</div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Large Sycamore Removal</h4>
+                            <p>Earlsdon, Coventry</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1588878309774-4b3f42a19a8f?w=800&q=80" alt="Crown reduction project">
+                    <div class="photo-badge">Example photo - you choose yours</div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Crown Reduction & Shaping</h4>
+                            <p>Kenilworth</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&q=80" alt="Hedge trimming project">
+                    <div class="photo-badge">Example photo - you choose yours</div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Conifer Hedge Reduction</h4>
+                            <p>Rugby</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80" alt="Site clearance project">
+                    <div class="photo-badge">Example photo - you choose yours</div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Complete Site Clearance</h4>
+                            <p>Warwick</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800&q=80" alt="Tree pruning project">
+                    <div class="photo-badge">Example photo - you choose yours</div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Silver Birch Maintenance</h4>
+                            <p>Coventry City Centre</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80" alt="Stump grinding">
+                    <div class="photo-badge">Example photo - you choose yours</div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>Stump Cluster Removal</h4>
+                            <p>Solihull</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-cta">
+                <p>Need trees removed, pruned or maintained?</p>
+                <a href="#quote" class="btn-gallery">Start Your Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Showcase Section -->
+    <section class="video-section">
+        <div class="container">
+            <div class="video-wrapper">
+                <div class="video-content">
+                    <h2>Watch Our Work in Action</h2>
+                    <p>See how Joe and the team tackle tree work across Coventry — safely, professionally, and always leaving the site spotless.</p>
+                    <ul class="video-features">
+                        <li>✓ Qualified arborists</li>
+                        <li>✓ Safe working practices</li>
+                        <li>✓ Clean & tidy site every time</li>
+                        <li>✓ Customer satisfaction guaranteed</li>
+                    </ul>
+                </div>
+                <div class="video-container">
+                    <div class="video-placeholder">
+                        <img src="https://images.unsplash.com/photo-1617143520628-86934f404d06?w=1200&q=80" alt="Three Spires Tree Care video showcase">
+                        <div class="play-button">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                <circle cx="40" cy="40" r="40" fill="rgba(212, 175, 55, 0.9)"/>
+                                <path d="M32 25L57 40L32 55V25Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <div class="video-note">
+                            <p><strong>Live Preview Note:</strong> In the full version, this would feature a video showcase of Three Spires Tree Care's best projects and customer testimonials.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clean-up Guarantee Section -->
+    <section class="guarantee">
+        <div class="container">
+            <div class="guarantee-content">
+                <div class="guarantee-icon">🌳</div>
+                <h2>Always Left Clean & Tidy</h2>
+                <p class="guarantee-text">"They cleaned up afterwards so well you wouldn't have known they'd been." — Real customer feedback</p>
+                <p>Unlike many tree surgeons, we take pride in leaving your property spotless. Every job includes a thorough clean-up with all waste removed from site at no extra cost.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Reviews Section -->
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <p>Real reviews from real customers on Google</p>
+            </div>
+
+            <!-- Google Reviews Summary -->
+            <div class="google-summary">
+                <div class="google-logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                        <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                        <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                        <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                    </svg>
+                    <span>Google Reviews</span>
+                </div>
+                <div class="google-rating">
+                    <div class="rating-number">5.0</div>
+                    <div class="rating-stars">
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                    </div>
+                    <div class="rating-count">Based on 27 reviews</div>
+                </div>
+            </div>
+
+            <!-- Google Review Cards -->
+            <div class="google-reviews-grid">
+                <!-- Review 1 -->
+                <div class="google-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">GR</div>
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">G Rawson</div>
+                            <div class="review-meta">
+                                <div class="review-stars-small">
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                </div>
+                                <span class="review-date">5 months ago</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        Highly recommend Three Spires Tree Care. Joe was prompt, efficient and polite and organised getting our job done very quickly. The job was carried out by A.J. who was equally efficient and polite, got our tree trimmed in no time and left the place neat and tidy. We won't hesitate to use their services again.
+                    </div>
+                    <div class="google-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                        <span>Posted on Google</span>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="google-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">TT</div>
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Tim Timee</div>
+                            <div class="review-meta">
+                                <div class="review-stars-small">
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                </div>
+                                <span class="review-date">4 years ago</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        Fantastic, professional, quick, quiet (all things considered) and amazingly clean job! Thank you so much Joe and the team for your hard work! Will definitely be getting in touch again in few years time once my Lime trees will need some more maintenance!
+                    </div>
+                    <div class="google-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                        <span>Posted on Google</span>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="google-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">DK</div>
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Debra Knighton</div>
+                            <div class="review-meta">
+                                <div class="review-stars-small">
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                </div>
+                                <span class="review-date">4 months ago</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        We wouldn't have anyone else but Joe to look after our trees. He does a great job and always leaves things tidy. He advises and listens to what we need and then delivers. Would 100% recommend.
+                    </div>
+                    <div class="google-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                        <span>Posted on Google</span>
+                    </div>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="google-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">JL</div>
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">J Long</div>
+                            <div class="review-meta">
+                                <div class="review-stars-small">
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                </div>
+                                <span class="review-date">2 years ago</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        Joe and the team are brilliant. They removed a huge conifer tree from the bottom of our garden. They arrived on time and left the garden clean and tidy once they had finished. Very efficient, friendly and professional. I couldn't recommend this team enough.
+                    </div>
+                    <div class="google-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                        <span>Posted on Google</span>
+                    </div>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="google-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">AD</div>
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Adam Diggle</div>
+                            <div class="review-meta">
+                                <div class="review-stars-small">
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                </div>
+                                <span class="review-date">4 years ago</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        Joe and his crew were fantastic. Friendly, professional and removed our huge Sycamore in less than a day. Cleaned up afterwards so well you wouldn't have known they'd been. Cannot recommend them enough.
+                    </div>
+                    <div class="google-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                        <span>Posted on Google</span>
+                    </div>
+                </div>
+
+                <!-- Review 6 -->
+                <div class="google-review-card">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">CP</div>
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Charles Powiesnik</div>
+                            <div class="review-meta">
+                                <div class="review-stars-small">
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                </div>
+                                <span class="review-date">3 years ago</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        A thoroughly friendly, knowledgeable and professional Team who pruned, shaped and fashioned our Beeches, Cherry and Silver Birch to perfection. Thanks 3 Spires — Joe and Lee, you are awesome!
+                    </div>
+                    <div class="google-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                        <span>Posted on Google</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View All Reviews Button -->
+            <div class="reviews-cta">
+                <a href="https://www.google.com/maps/place/Three+Spires+Tree+Care/@52.430434,-1.5384398,17z/data=!4m16!1m9!3m8!1s0x48774bdfe326f321:0xa37498dd74058b58!2sThree+Spires+Tree+Care!8m2!3d52.430434!4d-1.5358649!9m1!1b1!16s%2Fg%2F11jp0v4t3_!3m5!1s0x48774bdfe326f321:0xa37498dd74058b58!8m2!3d52.430434!4d-1.5358649!16s%2Fg%2F11jp0v4t3_?entry=ttu&g_ep=EgoyMDI2MDIyMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="btn-google-reviews">
+                    <svg width="20" height="20" viewBox="0 0 24 24">
+                        <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                        <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                        <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                        <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                    </svg>
+                    View All 27 Reviews on Google
+                </a>
+                <p class="reviews-note">See what real customers are saying about Three Spires Tree Care</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Section -->
+    <section class="before-after-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Transformations That Speak for Themselves</h2>
+                <p>Real projects, real results — see the Three Spires difference</p>
+            </div>
+            <div class="before-after-grid">
+                <div class="before-after-item">
+                    <div class="comparison-container">
+                        <div class="before-image">
+                            <img src="https://images.unsplash.com/photo-1617143520628-86934f404d06?w=600&q=60&sat=-100" alt="Garden before tree removal">
+                            <span class="label before-label">Before</span>
+                        </div>
+                        <div class="after-image">
+                            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&q=80" alt="Garden after tree removal">
+                            <span class="label after-label">After</span>
+                        </div>
+                    </div>
+                    <h4>Large Conifer Removal</h4>
+                    <p>Overgrown garden transformed with full tree removal and clearance</p>
+                </div>
+                <div class="before-after-item">
+                    <div class="comparison-container">
+                        <div class="before-image">
+                            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=60&bri=-10" alt="Hedge before trimming">
+                            <span class="label before-label">Before</span>
+                        </div>
+                        <div class="after-image">
+                            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80" alt="Hedge after trimming">
+                            <span class="label after-label">After</span>
+                        </div>
+                    </div>
+                    <h4>Hedge Reduction & Shaping</h4>
+                    <p>Overgrown hedge brought back under control and neatly shaped</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>Why Choose Three Spires Tree Care?</h2>
+                    <p class="about-intro">We're not just another tree surgery company — we're your local Coventry arborists committed to delivering safe, professional tree care every single time.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="feature-number">5.0</div>
+                            <h4>Perfect Rating</h4>
+                            <p>Consistently rated 5 stars by the Coventry community</p>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-number">27+</div>
+                            <h4>Google Reviews</h4>
+                            <p>Real feedback from satisfied customers across the Midlands</p>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-number">100%</div>
+                            <h4>Clean Site</h4>
+                            <p>Every job left clean and tidy with all waste removed</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-values">
+                    <h3>Our Values</h3>
+                    <div class="value-item">
+                        <strong>Safe & Professional:</strong> Fully qualified arborists who follow the latest safety standards and best practices.
+                    </div>
+                    <div class="value-item">
+                        <strong>Reliable & Punctual:</strong> We turn up on time, every time, and complete projects when promised.
+                    </div>
+                    <div class="value-item">
+                        <strong>Friendly & Honest:</strong> Approachable, honest advice without the jargon or pressure. Just ask Joe.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Form Section -->
+    <section id="quote" class="quote-section">
+        <div class="container">
+            <div class="quote-wrapper">
+                <div class="quote-intro">
+                    <h2>Get Your Free, No-Obligation Quote</h2>
+                    <p>Tell us about your tree work and we'll provide a detailed, transparent quote — usually within 24 hours.</p>
+                    <div class="quote-benefits">
+                        <div class="benefit-item">✓ Free site visit & assessment</div>
+                        <div class="benefit-item">✓ No hidden fees</div>
+                        <div class="benefit-item">✓ Expert arborist advice included</div>
+                    </div>
+                </div>
+                <form class="quote-form" id="quoteForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Interested In *</label>
+                        <select id="service" name="service" required>
+                            <option value="">Please select...</option>
+                            <option value="tree-removal">Tree Removal & Felling</option>
+                            <option value="tree-pruning">Tree Pruning & Crown Reduction</option>
+                            <option value="hedge-maintenance">Hedge Maintenance & Trimming</option>
+                            <option value="site-clearance">Site Clearance</option>
+                            <option value="stump-grinding">Stump Grinding</option>
+                            <option value="other">Other / Multiple Services</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Tell Us About Your Project *</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Please describe what you'd like done — type of tree, size, access, etc..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Get My Free Quote</button>
+                    <p class="form-note">We'll respond within 24 hours. Your information is kept confidential.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Three Spires Tree Care</h3>
+                    <p>Coventry's trusted 5-star tree surgery specialists</p>
+                    <div class="footer-stars">★★★★★</div>
+                </div>
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Tree Removal</a></li>
+                        <li><a href="#services">Tree Pruning</a></li>
+                        <li><a href="#services">Hedge Maintenance</a></li>
+                        <li><a href="#services">Site Clearance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column" id="contact">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>📍 Mapleton Rd, Coventry CV6</li>
+                        <li>📞 <a href="tel:07761349114">07761 349114</a></li>
+                        <li>✉️ <a href="mailto:Info@threespirestreecare.co.uk">Info@threespirestreecare.co.uk</a></li>
+                        <li>🕐 Mon-Fri: 7am - 6pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Three Spires Tree Care. All rights reserved.</p>
+                <p class="demo-notice">Demo website by <a href="https://web-force.info" target="_blank">web-force.info</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
